@@ -1,13 +1,31 @@
+/* Menggunakan font Inter */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Background modern dengan animasi gradient halus */
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+}
 
-        /* Menggunakan font Inter */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Efek klik tombol yang lebih baik */
-        .btn-calc {
-            transition: all 0.1s ease-in-out;
-        }
-        .btn-calc:active {
-            transform: scale(0.95);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
+/* Efek kaca (Glassmorphism) */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Tombol Kalkulator Modern */
+.btn-calc {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-calc:active {
+    transform: scale(0.92);
+}
+
+/* Efek Glow untuk Status */
+.status-glow-normal { box-shadow: 0 0 15px rgba(59, 130, 246, 0.2); border-color: rgba(59, 130, 246, 0.5); }
+.status-glow-success { box-shadow: 0 0 25px rgba(34, 197, 94, 0.6); border-color: #22c55e; }
+.status-glow-error   { box-shadow: 0 0 25px rgba(239, 68, 68, 0.6); border-color: #ef4444; }
