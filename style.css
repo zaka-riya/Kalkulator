@@ -1,0 +1,13 @@
+
+        /* Menggunakan font Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Efek klik tombol yang lebih baik */
+        .btn-calc {
+            transition: all 0.1s ease-in-out;
+        }
+        .btn-calc:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
