@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Nur Ichsan Zakariya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 relative">
+
+    <div class="background-anim">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div id="calculator-body" class="glass-panel w-full max-w-md rounded-[2.5rem] p-8 transition-all duration-300 status-glow-normal relative z-10">
+        
+        <div class="flex justify-between items-center mb-10">
+            <span class="text-sm font-bold tracking-widest text-slate-400 uppercase">Calculator</span>
+            <div id="statusIndicator" class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-slate-100 shadow-sm text-sm font-semibold text-blue-500">
+                <span id="statusDot" class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
+                <span id="statusText">Ready</span>
+            </div>
+        </div>
+
+        <div class="mb-8 px-2">
+            <input type="text" id="display" 
+                   class="w-full h-24 bg-transparent text-right text-7xl font-medium text-slate-800 outline-none placeholder-slate-300 tracking-tight" 
+                   readonly 
+                   placeholder="0">
+        </div>
+
+        <div class="grid grid-cols-4 gap-4">
+            <button data-value="C" class="btn-calc h-20 w-full rounded-3xl bg-rose-500 text-white hover:bg-rose-600 font-bold text-2xl shadow-lg shadow-rose-500/30">C</button>
+            <button data-value="DEL" class="btn-calc h-20 w-full rounded-3xl bg-slate-200 text-slate-600 hover:bg-slate-300 font-bold text-sm">DEL</button>
+            <button data-value="%" class="btn-calc h-20 w-full rounded-3xl bg-slate-200 text-slate-600 hover:bg-slate-300 font-bold text-2xl">%</button>
+            <button data-value="/" class="btn-calc h-20 w-full rounded-3xl bg-blue-500 text-white hover:bg-blue-600 font-semibold text-3xl shadow-lg shadow-blue-500/30">÷</button>
+
+            <button data-value="7" class="btn-calc h-20 w-full rounded-3xl bg-white text-slate-700 border border-slate-100 hover:bg-slate-50 shadow-sm text-3xl font-medium">7</button>
+            <button data-value="8" class="btn-calc h-20 w-full rounded-3xl bg-white text-slate-700 border border-slate-100 hover:bg-slate-50 shadow-sm text-3xl font-medium">8</button>
+            <button data-value="9" class="btn-calc h-20 w-full rounded-3xl bg-white text-slate-700 border border-slate-100 hover:bg-slate-50 shadow-sm text-3xl font-medium">9</button>
+            <button data-value="*" class="btn-calc h-20 w-full rounded-3xl bg-blue-500 text-white hover:bg-blue-600 font-semibold text-3xl shadow-lg shadow-blue-500/30">×</button>
+
+            <button data-value="4" class="btn-calc h-20 w-full rounded-3xl bg-white text-slate-700 border border-slate-100 hover:bg-slate-50 shadow-sm text-3xl font-medium">4</button>
+            <button data-value="5" class="btn-calc h-20 w-full rounded-3xl bg-white text-slate-700 border border-slate-100 hover:bg-slate-50 shadow-sm text-3xl font-medium">5</button>
+            <button data-value="6" class="btn-calc h-20 w-full rounded-3xl bg-white text-slate-700 border border-slate-100 hover:bg-slate-50 shadow-sm text-3xl font-medium">6</button>
+            <button data-value="-" class="btn-calc h-20 w-full rounded-3xl bg-blue-500 text-white hover:bg-blue-600 font-semibold text-3xl shadow-lg shadow-blue-500/30">-</button>
+
+            <button data-value="1" class="btn-calc h-20 w-full rounded-3xl bg-white text-slate-700 border border-slate-100 hover:bg-slate-50 shadow-sm text-3xl font-medium">1</button>
+            <button data-value="2" class="btn-calc h-20 w-full rounded-3xl bg-white text-slate-700 border border-slate-100 hover:bg-slate-50 shadow-sm text-3xl font-medium">2</button>
+            <button data-value="3" class="btn-calc h-20 w-full rounded-3xl bg-white text-slate-700 border border-slate-100 hover:bg-slate-50 shadow-sm text-3xl font-medium">3</button>
+            <button data-value="+" class="btn-calc h-20 w-full rounded-3xl bg-blue-500 text-white hover:bg-blue-600 font-semibold text-3xl shadow-lg shadow-blue-500/30">+</button>
+
+            <button data-value="0" class="btn-calc col-span-2 h-20 w-full rounded-3xl bg-white text-slate-700 border border-slate-100 hover:bg-slate-50 shadow-sm text-3xl font-medium pl-8 text-left">0</button>
+            <button data-value="." class="btn-calc h-20 w-full rounded-3xl bg-white text-slate-700 border border-slate-100 hover:bg-slate-50 shadow-sm text-3xl font-medium">.</button>
+            <button data-value="=" class="btn-calc h-20 w-full rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white font-bold text-3xl shadow-xl shadow-blue-600/40">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
